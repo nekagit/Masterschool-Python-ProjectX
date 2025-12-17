@@ -323,7 +323,17 @@ def aufgabe_052_factorial(n: int) -> int:
 # Gruppe: Murat, Tom, Houssin
 def aufgabe_053_fibonacci(n: int) -> list[int]:
     """Gib eine Liste der ersten n Fibonacci-Zahlen zurück."""
-    pass
+    if n <= 0:
+        return []
+
+    if n == 1:
+        return [0]
+
+    fibs = [0, 1]
+    while len(fibs) < n:
+        fibs.append(fibs[-1] + fibs[-2])
+    return fibs
+
 
 
 # Gruppe: Murat, Tom, Houssin
