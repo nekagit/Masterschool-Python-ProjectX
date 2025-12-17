@@ -291,21 +291,24 @@ def aufgabe_044_find_key_by_value(data, value):
 
 
 # Gruppe: Ljubica, Alex
-def aufgabe_045_safe_get(data: dict[str, Any], path: list[str]) -> Optional[Any]:
-    """Greife sicher auf verschachtelte Dicts zu, None wenn Pfad fehlt."""
-    pass
+def aufgabe_045_safe_get(data, path):
+    current = data
+    for key in path:
+        if isinstance(current, dict) and key in current:
+            current = current[key]
+        else:
+            return None
+    return current
 
 
 # Gruppe: Ljubica, Alex
-def aufgabe_046_set_union(a: set[int], b: set[int]) -> set[int]:
-    """Vereinigung zweier Sets zurückgeben."""
-    pass
+def aufgabe_046_set_union(a, b):
+    return a | b
 
 
 # Gruppe: Ljubica, Alex
 def aufgabe_047_set_intersection(a: set[int], b: set[int]) -> set[int]:
-    """Schnittmenge zweier Sets zurückgeben."""
-    pass
+    return a & b
 
 
 # Gruppe: Ljubica, Alex
