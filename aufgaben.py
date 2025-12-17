@@ -313,20 +313,22 @@ def aufgabe_047_set_intersection(a: set[int], b: set[int]) -> set[int]:
 
 # Gruppe: Ljubica, Alex
 def aufgabe_048_set_difference(a: set[int], b: set[int]) -> set[int]:
-    """Differenzmenge a - b zurückgeben."""
-    pass
-
+    return a - b
 
 # Gruppe: Ljubica, Alex
 def aufgabe_049_remove_duplicates_preserve_order(werte: list[str]) -> list[str]:
-    """Entferne doppelte Einträge aus einer Stringliste, Reihenfolge behalten."""
-    pass
+    seen = set()
+    result = []
+    for w in werte:
+        if w not in seen:
+            seen.add(w)
+            result.append(w)
+    return result
 
 
 # Gruppe: Ljubica, Alex
-def aufgabe_050_has_duplicates(werte: list[Any]) -> bool:
-    """Prüfe, ob die Liste doppelte Elemente enthält."""
-    pass
+def aufgabe_050_has_duplicates(werte: list) -> bool:
+    return len(werte) != len(set(werte))
 
 
 # Gruppe: Murat, Tom, Houssin
