@@ -23,7 +23,8 @@ def aufgabe_002_zaehle_vokale(text: str) -> int:
 # Gruppe: heidi, atila
 def aufgabe_003_ist_palindrom(text: str) -> bool:
     """Prüfe, ob der Text ein Palindrom ist (Groß/Klein ignorieren)."""
-    pass
+    text = text.lower()
+    return text == text[::-1]
 
 
 # Gruppe: heidi, atila
@@ -323,7 +324,17 @@ def aufgabe_052_factorial(n: int) -> int:
 # Gruppe: Murat, Tom, Houssin
 def aufgabe_053_fibonacci(n: int) -> list[int]:
     """Gib eine Liste der ersten n Fibonacci-Zahlen zurück."""
-    pass
+    if n <= 0:
+        return []
+
+    if n == 1:
+        return [0]
+
+    fibs = [0, 1]
+    while len(fibs) < n:
+        fibs.append(fibs[-1] + fibs[-2])
+    return fibs
+
 
 
 # Gruppe: Murat, Tom, Houssin
@@ -341,7 +352,13 @@ def aufgabe_055_primzahlen_bis(limit: int) -> list[int]:
 # Gruppe: Murat, Tom, Houssin
 def aufgabe_056_ggt(a: int, b: int) -> int:
     """Berechne den größten gemeinsamen Teiler."""
-    pass
+    a = abs(a)
+    b = abs(b)
+
+    while b != 0:
+        a, b = b, a % b
+
+    return a
 
 
 # Gruppe: Murat, Tom, Houssin
@@ -359,7 +376,7 @@ def aufgabe_058_durchschnitt_gewichtet(werte: list[float], gewichte: list[float]
 # Gruppe: Murat, Tom, Houssin
 def aufgabe_059_anzahl_true(flags: list[bool]) -> int:
     """Zähle die True-Werte in einer Bool-Liste."""
-    pass
+    print("Zähl die Trues doch selber!")
 
 
 # Gruppe: Murat, Tom, Houssin
