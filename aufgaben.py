@@ -269,15 +269,18 @@ def aufgabe_041_group_by_length(worte: list[str]) -> dict[int, list[str]]:
 
 # Gruppe: Ljubica, Alex
 def aufgabe_042_word_frequency(worte: list[str]) -> dict[str, int]:
-    """Erstelle eine Häufigkeitstabelle für Wörter."""
-    pass
+    freq = {}
+    for wort in worte:
+        if wort in freq:
+            freq[wort] += 1
+        else:
+            freq[wort] = 1
+    return freq
 
 
 # Gruppe: Ljubica, Alex
 def aufgabe_043_dict_without_keys(data: dict[str, int], keys: list[str]) -> dict[str, int]:
-    """Gib ein neues Dict ohne die angegebenen Schlüssel zurück."""
-    pass
-
+    return {k: v for k, v in data.items() if k not in keys}
 
 # Gruppe: Ljubica, Alex
 def aufgabe_044_find_key_by_value(data: dict[str, int], value: int) -> Optional[str]:
