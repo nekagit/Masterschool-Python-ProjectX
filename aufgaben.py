@@ -424,7 +424,12 @@ def aufgabe_082_join_ohne_letztes(worte: list[str]) -> str:
 
 def aufgabe_083_count_characters_ignore_case(text: str) -> dict[str, int]:
     """Zähle Zeichenhäufigkeiten ohne zwischen Groß/Klein zu unterscheiden."""
-    pass
+    haeufigkeit = {}
+
+    for zeichen in text.lower():
+        haeufigkeit[zeichen] = haeufigkeit.get(zeichen, 0) + 1
+
+    return haeufigkeit
 
 
 def aufgabe_084_vokale_entfernen(text: str) -> str:
