@@ -248,8 +248,12 @@ def aufgabe_039_merge_dicts(a: dict, b: dict) -> dict:
 
 # Gruppe: Ljubica, Alex
 def aufgabe_040_count_letters(text: str) -> dict[str, int]:
-    """Zähle, wie oft jeder Buchstabe im Text vorkommt (case-insensitive)."""
-    pass
+    text = text.lower()
+    counts = {}
+    for char in text:
+        if char.isalpha():  # samo slova
+            counts[char] = counts.get(char, 0) + 1
+    return counts
 
 
 # Gruppe: Ljubica, Alex
