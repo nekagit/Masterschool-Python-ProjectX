@@ -241,10 +241,10 @@ def aufgabe_038_invert_dict(data: dict[str, str]) -> dict[str, str]:
 
 
 # Gruppe: Ljubica, Alex
-def aufgabe_039_merge_dicts(a: dict[str, Any], b: dict[str, Any]) -> dict[str, Any]:
-    """Führe zwei Dicts zusammen, b überschreibt a bei Konflikten."""
-    pass
-
+def aufgabe_039_merge_dicts(a: dict, b: dict) -> dict:
+    result = a.copy()
+    result.update(b)
+    return result
 
 # Gruppe: Ljubica, Alex
 def aufgabe_040_count_letters(text: str) -> dict[str, int]:
